@@ -30,10 +30,58 @@
 <content src="book.html#_who_are_we_ja"/>
 </navPoint>
 <navPoint class="chapter" id="chapter_4" playOrder="5">
-<navLabel><text>References</text></navLabel>
-<content src="book.html#_references"/>
+<navLabel><text>Abstract</text></navLabel>
+<content src="book.html#_abstract"/>
 </navPoint>
 <navPoint class="chapter" id="chapter_5" playOrder="6">
+<navLabel><text>Aims and Learning Objectives</text></navLabel>
+<content src="book.html#_aims_and_learning_objectives"/>
+</navPoint>
+<navPoint class="chapter" id="chapter_6" playOrder="7">
+<navLabel><text>Introduction</text></navLabel>
+<content src="book.html#_introduction"/>
+</navPoint>
+<navPoint class="chapter" id="chapter_7" playOrder="8">
+<navLabel><text>Systems Engineering approach</text></navLabel>
+<content src="book.html#_systems_engineering_approach"/>
+</navPoint>
+<navPoint class="chapter" id="chapter_8" playOrder="9">
+<navLabel><text>Development phases</text></navLabel>
+<content src="book.html#_development_phases"/>
+</navPoint>
+<navPoint class="chapter" id="chapter_9" playOrder="10">
+<navLabel><text>Complex systems</text></navLabel>
+<content src="book.html#_complex_systems"/>
+</navPoint>
+<navPoint class="chapter" id="chapter_10" playOrder="11">
+<navLabel><text>Analysis</text></navLabel>
+<content src="book.html#_analysis"/>
+</navPoint>
+<navPoint class="chapter" id="chapter_11" playOrder="12">
+<navLabel><text>Norms &amp; standards</text></navLabel>
+<content src="book.html#_norms_amp_standards"/>
+</navPoint>
+<navPoint class="chapter" id="chapter_12" playOrder="13">
+<navLabel><text>From document to models</text></navLabel>
+<content src="book.html#_from_document_to_models"/>
+</navPoint>
+<navPoint class="chapter" id="chapter_13" playOrder="14">
+<navLabel><text>Requirements</text></navLabel>
+<content src="book.html#_requirements"/>
+</navPoint>
+<navPoint class="chapter" id="chapter_14" playOrder="15">
+<navLabel><text>Architecture</text></navLabel>
+<content src="book.html#_architecture"/>
+</navPoint>
+<navPoint class="chapter" id="chapter_15" playOrder="16">
+<navLabel><text>Behavior</text></navLabel>
+<content src="book.html#_behavior"/>
+</navPoint>
+<navPoint class="chapter" id="chapter_16" playOrder="17">
+<navLabel><text>Systems Requirements</text></navLabel>
+<content src="book.html#_systems_requirements"/>
+</navPoint>
+<navPoint class="chapter" id="chapter_17" playOrder="18">
 <navLabel><text>Tutorial presenters</text></navLabel>
 <content src="book.html#_tutorial_presenters"/>
 </navPoint>

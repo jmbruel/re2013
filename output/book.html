@@ -402,8 +402,6 @@ Who we are ?
 Introduction
 </p>
 </li>
-</ul></div>
-<div class="ulist"><ul>
 <li>
 <p>
 System Engineering
@@ -414,8 +412,6 @@ System Engineering
 System Requirements
 </p>
 </li>
-</ul></div>
-<div class="ulist"><ul>
 <li>
 <p>
 Requirements elicitation process
@@ -426,22 +422,16 @@ Requirements elicitation process
 KAOS overview
 </p>
 </li>
-</ul></div>
-<div class="ulist"><ul>
 <li>
 <p>
 SysML overview
 </p>
 </li>
-</ul></div>
-<div class="ulist"><ul>
 <li>
 <p>
 Mapping KAOS models into SysML models
 </p>
 </li>
-</ul></div>
-<div class="ulist"><ul>
 <li>
 <p>
 Practical case study
@@ -498,14 +488,236 @@ blabla
 </div>
 </div>
 <div class="sect1">
-<h2 id="_references">References</h2>
+<h2 id="_abstract">Abstract</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>[1] A. v. Lamsweerde. "Goal-Oriented Requirements Engineering: A Guided Tour," presented at the 5th IEEE International Symposium on Requirements Engineering, Toronto, Canada, 2001.</p></div>
-<div class="paragraph"><p>[2] A. v. Lamsweerde. Requirements Engineering: From System Goals to UML Models to Software Specifications. Hoboken, USA: John Wiley &amp; Sons, Inc., 2009.</p></div>
-<div class="paragraph"><p>[3] Jean-Michel Bruel and Pascal Roques. "Présentation des concepts de SysML."  Chap. 4 of the book: "Modélisation et analyse de systèmes embarqués", Hermès Book, To be published in June 2013.</p></div>
-<div class="paragraph"><p>[4] Manzoor Ahmad, Jean-Michel Bruel, R ́egine Laleau, Christophe Gnaho. Using RELAX, SysML and KAOS for Ambient Systems Requirements Modeling. Procedia Computer Science 10 (2012) 474–481.</p></div>
-<div class="paragraph"><p>[5] Jon Whittle, Pete Sawyer, Nelly Bencomo, Betty H. C. Cheng and Jean-Michel Bruel. RELAX: A Language to Address Uncertainty in Self-Adaptive Systems Requirements. Requirements Journal, Springer-Verlag, 2010, Volume 15, Number 2, Pages 177–196.</p></div>
-<div class="paragraph"><p>[6] <a href="http://www.sysml-france.fr">http://www.sysml-france.fr</a></p></div>
+<div class="paragraph"><p>This tutorial aims at presenting an integrated approach for systems requirements elicitation and modeling.
+The elicitation phase is based on a goal-based approach. Goal-Oriented Requirements Engineering (GORE) is considered an established
+paradigm in requirements engineering to handle elicitation, specification, analysis, negotiation and evolution of
+requirements by using goals [1]. GORE approaches, such as KAOS [2] were developed to support the development of large-scale systems by
+providing different models, where the goal model is naturally the central one. Eliciting requirements for such
+large-scale models is typically performed in a stepwise manner.
+The higher-level goals are decomposed into less abstract goals. The results of requirements elicitation must then be mapped
+into analysis models. In this tutorial, the modeling phase uses <a href="http://www.omgwiki.org/OMGSysML/">SysML</a> [3],
+an <a href="http://www.omg.org">OMG</a> modeling language for systems getting more and more popularity
+(used in Airbus, Thales, Continental among others), being taught in several countries
+and that start to be a pivot language for many others (e.g., Modelica, Simulink).</p></div>
+<div class="paragraph"><p>The focus will be on the integration of high level requirements models with SysML models, and their traceability [5]. A practical case study using models animation will be practiced by attendees [4].
+Indeed if no attention is paid to how requirements relate with each other in different requirements phases,
+there is a danger that the nature of these relationships will only become clear during later stages of software development when problems are more costly to rectify.
+enfid::backend-deckjs[]</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aims_and_learning_objectives">Aims and Learning Objectives</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Learn the basics of systems modeling using KAOS and <a href="http://www.omgwiki.org/OMGSysML/">SysML</a>.
+But before modeling with SysML we need to specify higher level requirements models, where goals of the application are determined before building the system&#8217;s models. Here the participants will learn how to elaborate the requirements using the goal-based approach KAOS.
+Goal-Oriented Requirements Engineering (GORE) has received increasing attention over the past few years. There are several goal-oriented approaches, each one using different kinds of models. Here we will use the KAOS approach [5].
+KAOS is a systematic approach for discovering and structuring system level requirements. In KAOS, goals can be divided into requirements (a type of goal to be achieved by a software agent), expectations (a type of goal to be achieved by an environment agent) and soft goals (e.g., quality attributes). In KAOS, goals can be refined into subgoals through and/or decompositions. There is also the possibility of specifying conflicts between goals. KAOS also introduces the concept of obstacle that is a situation that prevents the achievement of a goal. Usually the solution to the obstacle is expressed in the form of a new requirement.
+KAOS will be the basis for the <a href="http://www.omgwiki.org/OMGSysML/">SysML</a> requirements specification.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction">Introduction</h2>
+<div class="sectionbody">
+<div class="tableblock" id="Matrice">
+<table rules="all"
+style="margin-left:auto; margin-right:auto;"
+width="60%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<caption class="title">Table 1. Organisation of concepts</caption>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<thead>
+<tr>
+<th align="left" valign="top">                                       </th>
+<th align="left" valign="top"> Requirements        </th>
+<th align="left" valign="top"> Structure   </th>
+<th align="left" valign="top"> Comportement    </th>
+<th align="left" valign="top"> Transverse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table header">Organisation</p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table header">Analyse</p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table header">Conception</p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table header">Implémentation</p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_systems_engineering_approach">Systems Engineering approach</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Explanations of the point of view taken (horizontal axis of the matrix)</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_development_phases">Development phases</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre><tt>(vertical axis of the matrix)</tt></pre>
+</div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_complex_systems">Complex systems</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Humans and devices interacting
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+various technos (CS, Hydrolic, Electronic, &#8230;)
+</p>
+</li>
+<li>
+<p>
+integrated to provide services according to their environment
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="freeblueprints.net">
+<img src="images/starwars.jpeg" alt="Système complexe" width="70%" />
+</a>
+</div>
+<div class="title">Figure 1. Complex System</div>
+</div>
+<div class="paragraph"><p>Systems of systems</p></div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="starwars.wikia.com">
+<img src="images/starwars2.jpeg" alt="Système de systèmes" width="70%" />
+</a>
+</div>
+<div class="title">Figure 2. Systems of systems</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_analysis">Analysis</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="images/analyse1.png" alt="Des reqs au système" width="70%" />
+</div>
+<div class="title">Figure 3. From requirements to system</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/analyse2.png" alt="Des reqs au système" width="70%" />
+</div>
+<div class="title">Figure 4. Analyse Fonctionnelle et/ou Comportementale</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/analyse3.png" alt="Des reqs au système" width="70%" />
+</div>
+<div class="title">Figure 5. Analyse Structurelle</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/analyse4.png" alt="Des reqs au système" width="70%" />
+</div>
+<div class="title">Figure 6. Analyse de performance</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/analyse5.png" alt="Des reqs au système" width="70%" />
+</div>
+<div class="title">Figure 7. Analyses spécifiques</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/analyse6.png" alt="Des reqs au système" width="70%" />
+</div>
+<div class="title">Figure 8. Des exigences au système</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_norms_amp_standards">Norms &amp; standards</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>(IEEE, EIA, ISO, certification, NASA, INCOSE, AFIS, &#8230;).</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_from_document_to_models">From document to models</h2>
+<div class="sectionbody">
+</div>
+</div>
+<div class="sect1">
+<h2 id="_requirements">Requirements</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<a class="image" href="http://www.inria.fr/centre/rennes/actualites/vers-un-cahier-des-charges-mieux-formule">
+<img src="images/ingenierie-des-exigences.jpg" alt="Joke" width="70%" />
+</a>
+</div>
+<div class="title">Figure 9. 300 different skills in the same field</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/ProgrammerHumor.jpg" alt="Joke" width="70%" />
+</div>
+<div class="title">Illustration: Ambiguities (taken from <a href="https://plus.google.com/100035762233109552669/posts/a8Hafq2hZ74">here</a>)</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_architecture">Architecture</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Liens avec AADL, &#8230;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_behavior">Behavior</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Liens avec la V&amp;V</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_systems_requirements">Systems Requirements</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Requirements engineering (quickly because public will be aware).</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -625,7 +837,7 @@ Tutorials on Early Aspects at RE, MoDELS, AOSD conferences
 </dl></div>
 </div>
 <div class="sect2">
-<h3 id="_references_2">References</h3>
+<h3 id="_references">References</h3>
 <div class="paragraph"><p>[1] A. v. Lamsweerde. "Goal-Oriented Requirements Engineering: A Guided Tour," presented at the 5th IEEE International Symposium on Requirements Engineering, Toronto, Canada, 2001.</p></div>
 <div class="paragraph"><p>[2] A. v. Lamsweerde. Requirements Engineering: From System Goals to UML Models to Software Specifications. Hoboken, USA: John Wiley &amp; Sons, Inc., 2009.</p></div>
 <div class="paragraph"><p>[3] Jean-Michel Bruel and Pascal Roques. "Présentation des concepts de SysML."  Chap. 4 of the book: "Modélisation et analyse de systèmes embarqués", Hermès Book, To be published in June 2013.</p></div>
@@ -640,7 +852,7 @@ Tutorials on Early Aspects at RE, MoDELS, AOSD conferences
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br />
-Last updated 2013-06-03 15:17:30 CEST
+Last updated 2013-06-04 09:20:36 CEST
 </div>
 </div>
 </body>

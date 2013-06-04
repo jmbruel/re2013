@@ -2485,34 +2485,24 @@ Who we are ?
 <li>
 Introduction
 </li>
-</ul>
-<ul>
 <li>
 System Engineering
 </li>
 <li>
 System Requirements
 </li>
-</ul>
-<ul>
 <li>
 Requirements elicitation process
 </li>
 <li>
 KAOS overview
 </li>
-</ul>
-<ul>
 <li>
 SysML overview
 </li>
-</ul>
-<ul>
 <li>
 Mapping KAOS models into SysML models
 </li>
-</ul>
-<ul>
 <li>
 Practical case study
 </li>
@@ -3308,27 +3298,7 @@ blabla
 </section>
 <section class="slide">
 <h2>Abstract</h2>
-<p>This tutorial aims at presenting an integrated approach for systems requirements elicitation and modeling.
-The elicitation phase is based on a goal-based approach. Goal-Oriented Requirements Engineering (GORE) is considered an established
-paradigm in requirements engineering to handle elicitation, specification, analysis, negotiation and evolution of
-requirements by using goals [1]. GORE approaches, such as KAOS [2] were developed to support the development of large-scale systems by
-providing different models, where the goal model is naturally the central one. Eliciting requirements for such
-large-scale models is typically performed in a stepwise manner.
-The higher-level goals are decomposed into less abstract goals. The results of requirements elicitation must then be mapped
-into analysis models. In this tutorial, the modeling phase uses <a href="http://www.omgwiki.org/OMGSysML/">SysML</a> [3],
-an <a href="http://www.omg.org">OMG</a> modeling language for systems getting more and more popularity
-(used in Airbus, Thales, Continental among others), being taught in several countries
-and that start to be a pivot language for many others (e.g., Modelica, Simulink).</p>
-<p>The focus will be on the integration of high level requirements models with SysML models, and their traceability [5]. A practical case study using models animation will be practiced by attendees [4].
-Indeed if no attention is paid to how requirements relate with each other in different requirements phases,
-there is a danger that the nature of these relationships will only become clear during later stages of software development when problems are more costly to rectify.</p>
-</section>
-<section class="slide">
-<h2>Aims and Learning Objectives</h2>
-<p>Learn the basics of systems modeling using <a href="http://www.omgwiki.org/OMGSysML/">SysML</a>. But before modeling with SysML we need to specify higher level requirements models, where goals of the application are determined before building the system&#8217;s models. Here the participants will learn how to elaborate the requirements using the goal-based approach KAOS.
-Goal-Oriented Requirements Engineering (GORE) has received increasing attention over the past few years. There are several goal-oriented approaches, each one using different kinds of models. Here we will use the KAOS approach [5].
-KAOS is a systematic approach for discovering and structuring system level requirements. In KAOS, goals can be divided into requirements (a type of goal to be achieved by a software agent), expectations (a type of goal to be achieved by an environment agent) and soft goals (e.g., quality attributes). In KAOS, goals can be refined into subgoals through and/or decompositions. There is also the possibility of specifying conflicts between goals. KAOS also introduces the concept of obstacle that is a situation that prevents the achievement of a goal. Usually the solution to the obstacle is expressed in the form of a new requirement.
-KAOS will be the basis for the <a href="http://www.omgwiki.org/OMGSysML/">SysML</a> requirements specification.</p>
+<p>This tutorial aims at presenting an integrated approach for systems requirements elicitation and modeling.</p>
 </section>
 <section class="slide">
 <h2>Introduction</h2>
@@ -3338,7 +3308,7 @@ style="margin-left:auto; margin-right:auto;"
 width="60%"
 frame="border"
 cellspacing="0" cellpadding="4">
-<caption class="title">Table 1. La carte de base</caption>
+<caption class="title">Table 1. Organisation of concepts</caption>
 <col width="20%" />
 <col width="20%" />
 <col width="20%" />
@@ -3387,176 +3357,85 @@ cellspacing="0" cellpadding="4">
 </div>
 </section>
 <section class="slide">
-<h2>Points de vue</h2>
-<p>Dans un axe horizontal, j&#8217;ai différencié quatre grands points de vue :</p>
-<div class="dlist"><dl>
-<dt class="hdlist1">
-Requirements
-</dt>
-<dd>
-<p>
-        Les exigences et leur prises en compte sont un éléments critique pour le succès du développement du système. Sans explorer l&#8217;ensemble des activités d&#8217;ingénierie système (ce qui nécessiterait tout un volume du type de <a href="#reqs">[reqs]</a>) nous insisterons beaucoup sur cet aspect qui est souvent à l&#8217;origine de l&#8217;intérêt de <a href="http://www.omgwiki.org/OMGSysML/">SysML</a>.
-</p>
-</dd>
-<dt class="hdlist1">
-Structure
-</dt>
-<dd>
-<p>
-        La description de l&#8217;architecture et des éléments constitutifs du système, avec les blocs, leurs relations, organisations internes, etc. constituera un point de vue important. C&#8217;est souvent la partie de <a href="http://www.omgwiki.org/OMGSysML/">SysML</a> qui pose le moins de problème aux débutants.
-</p>
-</dd>
-<dt class="hdlist1">
-Comportement
-</dt>
-<dd>
-<p>
-        Le comportement d&#8217;un système est du point de vue de l&#8217;utilisateur final beaucoup plus important que la structure elle-même. C&#8217;est la partie
-        qu&#8217;il est la plus à même d&#8217;exprimer, de comprendre (vos modèles) et de valider.
-</p>
-</dd>
-<dt class="hdlist1">
-Transverse
-</dt>
-<dd>
-<p>
-        Un certains nombre de concepts sont transverses aux trois points de vue précédents. Il s&#8217;agira principalement de parler de cohérence entre
-        les phases de développement ou entre les points de vue.
-</p>
-</dd>
-</dl></div>
-<div class="sect2">
-<h3 id="_phase_de_développement">7.1. Phase de développement</h3>
-<p>Dans un axe vertical, j&#8217;ai différencié quatre grandes phases du cycle de vie du développement :</p>
-<div class="dlist"><dl>
-<dt class="hdlist1">
-Organisation
-</dt>
-<dd>
-<p>
-        Une étape indépendante du type de cycle de développement envisagé (en V, agile, etc.) mais qui concerne la mise en place
-        d&#8217;un cadre de travail qui permette un développement de qualité (outils, éditeurs, gestionnaire de version, de tâches, etc.)
-</p>
-</dd>
-<dt class="hdlist1">
-Analyse
-</dt>
-<dd>
-<p>
-        Cette phase vise plutôt à examiner le domaine du problème. Elle se focalise sur les cahiers des charges et les exigences.
-        L&#8217;analyse débouche sur un dossier d&#8217;analyse qui décrit les grandes lignes (cas d&#8217;utilisation, architecture principale) du système.
-</p>
-</dd>
-<dt class="hdlist1">
-Conception
-</dt>
-<dd>
-<p>
-        Cette phase vise plutôt à examiner le domaine de la solution. Elle débouche sur un dossier de conception qui décrit les détails
-        conceptuels de la solution envisagée (structure détaillée, comportement, etc.)
-</p>
-</dd>
-<dt class="hdlist1">
-Implémentation
-</dt>
-<dd>
-<p>
-        Cette phase traite des développements finaux (construction ou approvisionnement en matériel, développement de codes, etc.).
-</p>
-</dd>
-</dl></div>
-</div>
+<h2>Systems Engineering approach</h2>
+<p>Explanations of the point of view taken (horizontal axis of the matrix)</p>
 </section>
 <section class="slide">
-<h2>Différence avec l&#8217;ingénierie logicielle</h2>
-<p>Enseignant en informatique, je me retrouve souvent à enseigner <a href="http://www.omgwiki.org/OMGSysML/">SysML</a> à des informaticiens.
-D&#8217;où ce petit exposé sur mon opinion de la différence entre les deux "mondes".</p>
-<div class="sect2">
-<h3 id="_une_ingénierie_plus_ancienne">8.1. Une ingénierie plus ancienne</h3>
-<p>Que ce soit généralement en terme de cycle de développement ou historiquement,
-l&#8217;Ingénierie Système arrive avant l&#8217;Ingénierie Logicielle. Les ingénieurs systèmes ont donc une longue
-expérience et des pratiques bien ancrées.</p>
-</div>
-<div class="sect2">
-<h3 id="_des_systèmes_plus_complexes">8.2. Des systèmes plus complexes</h3>
-<p>On parle de système complexe lorsque l&#8217;on a affaire à :</p>
+<h2>Development phases</h2>
+<div class="literalblock">
+<div class="content">
+<pre><tt>(vertical axis of the matrix)</tt></pre>
+</div></div>
+</section>
+<section class="slide">
+<h2>Complex systems</h2>
 <ul>
 <li>
-un ensemble d'éléments humains et matériels en relation avec :
+Humans and devices interacting
 <ul>
 <li>
-de nombreux éléments technologiques (Informatique, Hydraulique, Electronique, &#8230;)
+various technos (CS, Hydrolic, Electronic, &#8230;)
 </li>
 <li>
-intégrés pour fournir des services (finalité du système) en fonction de leur environnement
-</li>
-<li>
-interagissant entre eux et avec leur environnement
+integrated to provide services according to their environment
 </li>
 </ul>
 </li>
 </ul>
 <img src="images/starwars.jpeg" alt="Système complexe" />
-<p>On parle aussi de <strong>Système de systèmes</strong> quand un système :</p>
-<ul>
-<li>
-doit gérer les interactions entre ses parties (ou composantes)
-</li>
-<li>
-assure un comportement prévu à l&#8217;avance
-</li>
-<li>
-gère les comportements (de l&#8217;environnement) inatendus
-</li>
-</ul>
+</section>
+<section class="slide">
+<h2>Complex systems (ctd.)</h2>
+<p>Systems of systems</p>
 <img src="images/starwars2.jpeg" alt="Système de systèmes" />
-</div>
-<div class="sect2">
-<h3 id="_différents_types_d_8217_analyse">8.3. Différents types d&#8217;analyse</h3>
-<p>Toute la question que l&#8217;Ingénierie Système cherche à résoudre est : comment passer des exigences au système
-de la façon la plus efficace possible.</p>
+</section>
+<section class="slide">
+<h2>Analysis</h2>
 <img src="images/analyse1.png" alt="Des reqs au système" />
-<p>Pour cela l&#8217;Ingénierie Système est découpée en plusieurs analyses, chacune avec un but bien particulier :</p>
+</section>
+<section class="slide">
+<h2>Analysis (ctd.)</h2>
 <img src="images/analyse2.png" alt="Des reqs au système" />
+</section>
+<section class="slide">
+<h2>Analysis (ctd.)</h2>
 <img src="images/analyse3.png" alt="Des reqs au système" />
+</section>
+<section class="slide">
+<h2>Analysis (ctd.)</h2>
 <img src="images/analyse4.png" alt="Des reqs au système" />
+</section>
+<section class="slide">
+<h2>Analysis (ctd.)</h2>
 <img src="images/analyse5.png" alt="Des reqs au système" />
-<p>Pour arriver à combler le gap entre le système à développer et ses spécifications.</p>
+</section>
+<section class="slide">
+<h2>Analysis (ctd.)</h2>
 <img src="images/analyse6.png" alt="Des reqs au système" />
-</div>
 </section>
 <section class="slide">
-<h2>Normes et standards</h2>
-<p>Il existe un grand nombre de standards en Ingénierie Système. Cette section fera (bientôt) une revue
-de ces différents standards et organismes et de leur utilisation (IEEE, EIA, ISO, certification, NASA, INCOSE, AFIS, &#8230;).</p>
-<p>Enfin, citons un rapport de 2010, le <a href="http://www.industrie.gouv.fr/logiciel-embarque/Rapport-BGLE-final.pdf">Rapport Potier</a>, qui présente l'état des logiciels embarqués
-et qui sera utiles à ceux qui s&#8217;intéressent aux verrous technologiques liés à ce domaine.</p>
-<p>L&#8217;Ingénierie Système génère beaucoup de documentation. Les processus de certification (par exemple dans l&#8217;aéronautique) sont
-encore basés sur des documents textuels.</p>
+<h2>Norms &amp; standards</h2>
+<p>(IEEE, EIA, ISO, certification, NASA, INCOSE, AFIS, &#8230;).</p>
 </section>
 <section class="slide">
-<h2>Des documents aux modèles</h2>
-<p>Vue la complexité grandissante des systèmes, petit à petit cette ingénierie tente de passer d&#8217;une
-ingénierie <strong>centrée documents</strong> à une ingénierie <strong>centrée modèles</strong>. D&#8217;où l&#8217;importance de se poser la question
-des notations et langages pour réaliser et communiquer avec ces modèles (cf. <a href="#Notation">[Notation]</a>).</p>
+<h2>From document to models</h2>
 </section>
 <section class="slide">
-<h2>Les exigences</h2>
-<p>L&#8217;ingénierie des exigences est d&#8217;une importance capitale en Ingénierie Système.
-Nous renvoyons pour l&#8217;instant le lecteur au cours de Master qui précède ce cours.</p>
+<h2>Requirements</h2>
 <img src="images/ingenierie-des-exigences.jpg" alt="Joke" />
 <img src="./images/ProgrammerHumor.jpg" alt="Joke" />
 </section>
 <section class="slide">
-<h2>L&#8217;architecture du système</h2>
+<h2>Architecture</h2>
 <p>Liens avec AADL, &#8230;</p>
 </section>
 <section class="slide">
-<h2>Le comportement du système</h2>
+<h2>Behavior</h2>
 <p>Liens avec la V&amp;V</p>
 </section>
 <section class="slide">
 <h2>Systems Requirements</h2>
+<p>Requirements engineering (quickly because public will be aware).</p>
 </section>
 <section class="slide">
 <h2>Questions and discussions</h2>
@@ -4032,15 +3911,15 @@ bgD0CEIOgo6CPhyW6paNgA4BCEG1gpmDsCmxQtCEIJccQWZjAhCDKGhPAQhA8BOAQhAqEIQGEqEI
 FwhCEAlQhAqEIQCEIQCAhCBUIQgEIQgEIQgEIQgEIQgEIQgEIQgEIQgEIQgEIQgEhQhA0lCEKR//
 2Q==" />
 </span></p>
-<div class="sect2">
-<h3 id="_references">15.1. References</h3>
+</section>
+<section class="slide">
+<h2>References</h2>
 <p>[1] A. v. Lamsweerde. "Goal-Oriented Requirements Engineering: A Guided Tour," presented at the 5th IEEE International Symposium on Requirements Engineering, Toronto, Canada, 2001.</p>
 <p>[2] A. v. Lamsweerde. Requirements Engineering: From System Goals to UML Models to Software Specifications. Hoboken, USA: John Wiley &amp; Sons, Inc., 2009.</p>
 <p>[3] Jean-Michel Bruel and Pascal Roques. "Présentation des concepts de SysML."  Chap. 4 of the book: "Modélisation et analyse de systèmes embarqués", Hermès Book, To be published in June 2013.</p>
 <p>[4] Manzoor Ahmad, Jean-Michel Bruel, R ́egine Laleau, Christophe Gnaho. Using RELAX, SysML and KAOS for Ambient Systems Requirements Modeling. Procedia Computer Science 10 (2012) 474–481.</p>
 <p>[5] Jon Whittle, Pete Sawyer, Nelly Bencomo, Betty H. C. Cheng and Jean-Michel Bruel. RELAX: A Language to Address Uncertainty in Self-Adaptive Systems Requirements. Requirements Journal, Springer-Verlag, 2010, Volume 15, Number 2, Pages 177–196.</p>
 <p>[6] <a href="http://www.sysml-france.fr">http://www.sysml-france.fr</a></p>
-</div>
 </section>
 <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
 <a href="#" class="deck-next-link" title="Next">&#8594;</a>
