@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+
+<book lang="en">
+<bookinfo>
+    <title>Model-Based Systems Requirements</title>
+    <date>RE -- July 18th, 2013</date>
+    <author>
+        <firstname>Jean-Michel Bruel and João Araújo</firstname>
+    </author>
+    <authorinitials>JMB</authorinitials>
+<revhistory><revision><revnumber>1.0</revnumber><date>RE -- July 18th, 2013</date><authorinitials>JMB</authorinitials></revision></revhistory>
+</bookinfo>
+<chapter id="_content">
+<title>Content</title>
+<itemizedlist>
+<listitem>
+<simpara>
+Who we are ?
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Introduction
+</simpara>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem>
+<simpara>
+System Engineering
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+System Requirements
+</simpara>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem>
+<simpara>
+Requirements elicitation process
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+KAOS overview
+</simpara>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem>
+<simpara>
+SysML overview
+</simpara>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem>
+<simpara>
+Mapping KAOS models into SysML models
+</simpara>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem>
+<simpara>
+Practical case study
+</simpara>
+</listitem>
+</itemizedlist>
+</chapter>
+<chapter id="_who_are_we_jmb">
+<title>Who are we ? (JMB)</title>
+<itemizedlist>
+<listitem>
+<simpara>
+Professor at <ulink url="http://www.univ-toulouse.fr">Univesité de Toulouse</ulink>
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Co-fonder of <ulink url="http://www.sysml-france.fr">SysML-France</ulink>
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Editorial board of the <emphasis><ulink url="http://www.sosym.org">Software and System Modeling journal</ulink></emphasis> journal
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<emphasis>Steering Committee</emphasis> member of the ACM/IEEE <ulink url="http://www.modelsconference.org/">MODELS</ulink> conference
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Co-animator of the Ambient Systems team at <ulink url="http://www.irit.fr">IRIT</ulink>
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara><inlinemediaobject>
+  <imageobject>
+  <imagedata fileref="/Users/bruel/dev/jmbhome/public/images/logo-irit.png" contentwidth="50%"/>
+  </imageobject>
+  <textobject><phrase>/Users/bruel/dev/jmbhome/public/images/logo-irit.png</phrase></textobject>
+</inlinemediaobject></simpara>
+</chapter>
+<chapter id="_who_are_we_ja">
+<title>Who are we ? (JA)</title>
+<itemizedlist>
+<listitem>
+<simpara>
+blabla
+</simpara>
+</listitem>
+</itemizedlist>
+</chapter>
+<bibliography id="_references">
+<title>References</title>
+<simpara>[1] A. v. Lamsweerde. "Goal-Oriented Requirements Engineering: A Guided Tour," presented at the 5th IEEE International Symposium on Requirements Engineering, Toronto, Canada, 2001.</simpara>
+<simpara>[2] A. v. Lamsweerde. Requirements Engineering: From System Goals to UML Models to Software Specifications. Hoboken, USA: John Wiley &amp; Sons, Inc., 2009.</simpara>
+<simpara>[3] Jean-Michel Bruel and Pascal Roques. "Présentation des concepts de SysML."  Chap. 4 of the book: "Modélisation et analyse de systèmes embarqués", Hermès Book, To be published in June 2013.</simpara>
+<simpara>[4] Manzoor Ahmad, Jean-Michel Bruel, R ́egine Laleau, Christophe Gnaho. Using RELAX, SysML and KAOS for Ambient Systems Requirements Modeling. Procedia Computer Science 10 (2012) 474–481.</simpara>
+<simpara>[5] Jon Whittle, Pete Sawyer, Nelly Bencomo, Betty H. C. Cheng and Jean-Michel Bruel. RELAX: A Language to Address Uncertainty in Self-Adaptive Systems Requirements. Requirements Journal, Springer-Verlag, 2010, Volume 15, Number 2, Pages 177–196.</simpara>
+<simpara>[6] <ulink url="http://www.sysml-france.fr">http://www.sysml-france.fr</ulink></simpara>
+</bibliography>
+<chapter id="_tutorial_presenters">
+<title>Tutorial presenters</title>
+<section id="_prof_jean_michel_bruel">
+<title>Prof. Jean-Michel Bruel</title>
+<variablelist>
+<varlistentry>
+<term>
+Email                   
+</term>
+<listitem>
+<simpara>
+<ulink url="mailto:bruel@irit.fr">bruel@irit.fr</ulink> (main contact)
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+Organization    
+</term>
+<listitem>
+<simpara>
+<ulink url="http://www.univ-tlse.fr">U. of Toulouse</ulink> - <ulink url="http://www.irit.fr">CNRS/IRIT Lab</ulink>.
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+Country                 
+</term>
+<listitem>
+<simpara>
+France
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+Biography               
+</term>
+<listitem>
+<simpara>
+Jean-Michel Bruel received his Ph.D. from the University Paul Sabatier (Toulouse) in December 1996. From September 1997 to August 2008, he was associate professor at the University of Pau. Member of the LIUPPA (Laboratoire d&#8217;Informatique de l&#8217;Université de Pau et des Pays de l&#8217;Adour) from 2000 to 2008. Currently member of the MACAO team (Modèles, Aspects, Composants pour des Architectures à Objets) of the IRIT (Institut de Recheche en Informatique de Toulouse) CNRS laboratory. His research areas include development of distributed, component-based applications, methods integration, and on the use of formal methods in the Component-Based Software Engineering context. He has defended his "Habilitation à Diriger des Recherches" in December 2006 and obtained in 2008 a full professor position at the University of Toulouse. He is also head of the Computer Science department of the Technical Institute of Blagnac since 2009.
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+Related Experiences     
+</term>
+<listitem>
+<itemizedlist>
+<listitem>
+<simpara>
+Co-founder of the <ulink url="http://www.sysml-france.fr">SysML-France association</ulink>
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Software and Systems Modeling Journal editorial board
+</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</varlistentry>
+</variablelist>
+</section>
+<section id="_prof_joão_araújo">
+<title>Prof. João Araújo</title>
+<variablelist>
+<varlistentry>
+<term>
+Email                   
+</term>
+<listitem>
+<simpara>
+<ulink url="mailto:joao.araujo@fct.unl.pt">joao.araujo@fct.unl.pt</ulink>
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+Organization    
+</term>
+<listitem>
+<simpara>
+FCT, Universidade Nova de Lisboa, <ulink url="http://www.fct.unl.pt/">http://www.fct.unl.pt/</ulink>
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+Country                 
+</term>
+<listitem>
+<simpara>
+Portugal
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+Biography               
+</term>
+<listitem>
+<simpara>
+João Araújo holds a PhD in Computer Science from Lancaster University, UK, in the area of Requirements Engineering. He is an Assistant Professor of the Department of Informatics at the Universidade Nova de Lisboa, Portugal. His principal research interests are in Requirements Engineering, Model-Driven Development, Software Product Lines and and Early Aspects, where, he has published several papers on this topic in international conferences and workshops. He has particpated in the organization and/or program committees of several conferences such as RE, MoDELS, AOSD, OOPSLA, SPLC, CAiSE and ICSE conferences since 2002. Additionally, he served on the organization or program committees of MODELS, RE, ECOOP, AOSD, CAiSE and ICSE in the past few years. He has taught several tutorials on Early Aspects.
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+Related Experiences     
+</term>
+<listitem>
+<itemizedlist>
+<listitem>
+<simpara>
+RE and RCIS Program Board member
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Teaching Requirements Engineering in MSc and PhD courses in FCT/UNL.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Tutorials on Early Aspects at RE, MoDELS, AOSD conferences
+</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</varlistentry>
+</variablelist>
+</section>
+<bibliography id="_references_2">
+<title>References</title>
+<simpara>[1] A. v. Lamsweerde. "Goal-Oriented Requirements Engineering: A Guided Tour," presented at the 5th IEEE International Symposium on Requirements Engineering, Toronto, Canada, 2001.</simpara>
+<simpara>[2] A. v. Lamsweerde. Requirements Engineering: From System Goals to UML Models to Software Specifications. Hoboken, USA: John Wiley &amp; Sons, Inc., 2009.</simpara>
+<simpara>[3] Jean-Michel Bruel and Pascal Roques. "Présentation des concepts de SysML."  Chap. 4 of the book: "Modélisation et analyse de systèmes embarqués", Hermès Book, To be published in June 2013.</simpara>
+<simpara>[4] Manzoor Ahmad, Jean-Michel Bruel, R ́egine Laleau, Christophe Gnaho. Using RELAX, SysML and KAOS for Ambient Systems Requirements Modeling. Procedia Computer Science 10 (2012) 474–481.</simpara>
+<simpara>[5] Jon Whittle, Pete Sawyer, Nelly Bencomo, Betty H. C. Cheng and Jean-Michel Bruel. RELAX: A Language to Address Uncertainty in Self-Adaptive Systems Requirements. Requirements Journal, Springer-Verlag, 2010, Volume 15, Number 2, Pages 177–196.</simpara>
+<simpara>[6] <ulink url="http://www.sysml-france.fr">http://www.sysml-france.fr</ulink></simpara>
+</bibliography>
+</chapter>
+</book>
